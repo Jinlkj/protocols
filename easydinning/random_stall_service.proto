@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package trpc.easy_dinning.random_stalls;
 
-option go_package = "easydinning";
+option go_package = "github.com/Jinlkj/protocols/easydinning";
 
 
 service RandomStallService {
