@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package trpc.easy_dinning.random_stalls;
+
+option go_package = "github.com/Jinlkj/protocols/dinningeasy";
+
+
+service RandomStallService {
+  rpc GetBuildings(GetBuildingsReq)returns(GetBuildingsRsp);
+  rpc GetStalls(GetStallsReq) returns(GetStallsRsp);
+}
+
+message  GetBuildingsRsp {
+  repeated Building buildings = 1;
+}
+
+message GetBuildingsReq {
+
+}
+
+enum Building {
+  INIT = 0;
+  QH = 1;
+  BH = 2;
+  KX = 3;
+  QE_ISLAND = 4;
+}
+
+message GetStallsReq {
+  repeated Building buildings = 1;
+}
+
+message Stall {
+  string name = 1;
+  string stall_pic_url = 2;
+  repeated string tags = 3;
+  string desc = 4;
+  string loc = 5;
+}
+
+message GetStallsRsp {
+  repeated Stall stalls = 1;
+}
