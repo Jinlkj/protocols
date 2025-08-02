@@ -12,6 +12,7 @@ import (
 	"git.code.oa.com/trpc-go/trpc-go/codec"
 	_ "git.code.oa.com/trpc-go/trpc-go/http"
 	"git.code.oa.com/trpc-go/trpc-go/server"
+	"github.com/pkg/errors"
 )
 
 // START ======================================= Server Service Definition ======================================= START
